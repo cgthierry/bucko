@@ -53,7 +53,7 @@ function generateInvoices(options) {
 			documentContent: UBL.invoice({
 				businessId: _.random(1000, 9999),
 				currencyCode: 'USD',
-				issueDate: moment().subtract(_.random(0, 90), 'days').format('YYYY-MM-DD'),
+				issueDate: moment().subtract(_.random(0, 360), 'days').format('YYYY-MM-DD'),
 				payableAmount: _.random(200, 20000),
 				receiverCompanyName: connection.CompanyName,
 				receiverEmail: connection.Email,
